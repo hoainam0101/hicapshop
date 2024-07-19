@@ -1,0 +1,11 @@
+{
+    "name": "ManagerCategorys",
+    "alias": "managercategorys",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ManagerCategorys\\Providers\\ManagerCategorysServiceProvider"
+    ],
+    "files": []
+}
