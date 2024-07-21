@@ -1,0 +1,11 @@
+{
+    "name": "PageAdmin",
+    "alias": "pageadmin",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\PageAdmin\\Providers\\PageAdminServiceProvider"
+    ],
+    "files": []
+}

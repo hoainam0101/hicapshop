@@ -18,6 +18,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="../views/style.css">
     <script src="../views/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+        integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -99,30 +105,121 @@
                             <i class="far fa-bell"></i>
                             <span class="num">5</span>
 
-                            <div class="box-notification p-3">
-                                <div class="box-notification-header">
-                                    <strong>Thông báo</strong>
-                                </div>
-                                <div class="box-notification-body scroll">
-                                    <ul>
-                                        <li>
-                                            <a href="">
-                                                <span>ádsadasdas</span>
-                                            </a>
-                                        </li>
+                            <div class="box-notification d-none">
 
-                                    </ul>
+                                <div class="box-notification-has">
+                                    <div class="box-notification-header px-3 py-2">
+                                        <strong>Thông báo</strong>
+                                    </div>
+                                    <div class="box-notification-body scroll ">
+                                        <ul>
+                                            <li class="notification-item p-3">
+                                                <a class="d-flex align-items-center" style="gap: 10px;" href="#">
+                                                    <div class="border-icon">
+                                                        <i class="far fa-comments"></i>
+                                                    </div>
+                                                    <div class="notification-item-body w-75">
+                                                        <div
+                                                            class="notification-item-title d-flex align-items-center justify-content-between">
+                                                            <div class="fw-bold">Tin nhắn mới</div>
+                                                            <div class="text-muted fs-6">9:30 AM</div>
+                                                        </div>
+                                                        <div class="notification-item-content">
+                                                            <div>Đây là nội dung tin những asd đa asd asd asd asd
+                                                                asd
+                                                                asd a</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-item p-3">
+                                                <a class="d-flex align-items-center" style="gap: 10px;" href="#">
+                                                    <div class="border-icon">
+                                                        <i class="far fa-comments"></i>
+                                                    </div>
+                                                    <div class="notification-item-body w-75">
+                                                        <div
+                                                            class="notification-item-title d-flex align-items-center justify-content-between">
+                                                            <div class="fw-bold">Tin nhắn mới</div>
+                                                            <div class="text-muted fs-6">9:30 AM</div>
+                                                        </div>
+                                                        <div class="notification-item-content">
+                                                            <div>Đây là nội dung tin những asd đa asd asd asd asd
+                                                                asd
+                                                                asd a</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                <div
+                                    class="box-notification-not d-none p-3 d-flex flex-column align-items-center justify-content-center">
+                                    <i class="far fa-bell-slash text-muted" style="font-size: 30px"></i></span>
+                                    <span class="fst-italic text-muted">Hiện tại không có thông báo
+                                </div>
+
                             </div>
+
                         </div>
                         <div class="profile">
                             <i class="far fa-user"></i>
+                            <div class="box-user-profile d-none">
+                                <ul
+                                    class="box-user-profile-list d-flex flex-column align-items-center justify-content-center py-2">
+                                    <li class="box-user-profile-item">
+                                        <a href="#">Hồ sơ</a>
+                                    </li>
+                                    <li class="box-user-profile-item">
+                                        <a href="#">Đổi mật khẩu</a>
+                                    </li>
+                                    <li class="box-user-profile-item">
+                                        <a href="#">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </nav>
             </header>
         </div>
+        <section class="page-breadcrumbs container">
+            <div>Tổng quan / Trang chủ</div>
+        </section>
+        <section class="page-content container">
+            <form class="py-2">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
     </div>
+
+
 </body>
+<script>
+    $(document).ready(function () {
+        $('.notification').on('click', function () {
+            $('.box-notification').toggleClass('d-none');
+        });
+    });
+    $(document).ready(function () {
+        $('.profile').on('click', function () {
+            $('.box-user-profile').toggleClass('d-none');
+        });
+    });
+</script>
 
 </html>
